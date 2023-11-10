@@ -15,6 +15,8 @@ De acuerdo con los campos y tablas seleccionadas se diseña el query para extrae
 Dichos querys se encuentran en la carpeta 'procesar_querys'; teniendo en cuenta que previamente se había realizado la restauración de un backup de la base de datos hasta mayo del año 2023 y que contenía solo 'INSERTS'.
 Por lo anterior, para ejecutar dichos querys es requerido restaurar este backup en una base de datos Postgres local la cual contiene información sensible como ips y servidores que no puede ser compartida en el repositorio. Sin embargo, se deja a modo de información las herramientas usadas para generar los archivos .csv que se usarán en el proyecto.
 
+Adicionalmente es necesario la creación de un archivo .env que contenga la información de las variables de conexión a la base de datos Postgres local.
+
 # Paso 3: Lectura de los data_preparation
 En los archivos 'data_preparation_users' y 'data_preparation_posts' se encuentra la lectura de los dos dataset exportados y adjuntados en el repo 'dataset_posts.csv' y 'dataset_users.csv'.
 
