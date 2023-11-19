@@ -1,25 +1,63 @@
 # foro_discusion_udea
 Proyecto de grado que implementa inteligencia artificial para el análisis de los datos de un foro de discusión de temas tecnológicos.
 
-Para construir y desarrollar la información presentada en este repositorios se siguieron los siguientes pasos:
+Este proyecto incluye dos archivos Jupyter Notebook (.ipynb) que realizan análisis de datos utilizando datos almacenados en dos archivos CSV.
 
-# Paso 1: Selección de tablas y campos
-En los archivos 'selección de datos Discuss.excalidraw' o 'selección de datos Discuss.png' se encuentran las tablas y los campos resaltados en color azul a los cuales se le aplicará IA para cumplir los objetivos propuestos: <br>
-1. Segmentar y clasificar a los usuarios que utilizan la herramienta de foro de discusión en la Vicepresidencia de Tecnología de la empresa.
-2. Evaluar la calidad de las respuestas proporcionadas por los usuarios en el foro de discusión en la Vicepresidencia de Tecnología de la empresa.
+## Instrucciones de ejecución
+### Paso 1: Requisitos previos
+Asegúrate de tener instalado Python, Jupyter Notebook y Visual Studio Code en tu entorno. Puedes instalarlos ejecutando:
 
-El total de tablas presentes en la base de datos era de 114.
+```bash
+pip install jupyter
+```
 
-# Paso 2:  Ejecución de scripts en python
-De acuerdo con los campos y tablas seleccionadas se diseña el query para extraer los datos en dos archivos que servirán para cumplir los objetivos propuestos. 
-Dichos querys se encuentran en la carpeta 'procesar_querys'; teniendo en cuenta que previamente se había realizado la restauración de un backup de la base de datos hasta mayo del año 2023 y que contenía solo 'INSERTS'.
-Por lo anterior, para ejecutar dichos querys es requerido restaurar este backup en una base de datos Postgres local la cual contiene información sensible como ips y servidores que no puede ser compartida en el repositorio. Sin embargo, se deja a modo de información las herramientas usadas para generar los archivos .csv que se usarán en el proyecto.
+### Paso 2: Descargar el repositorio
 
-# Paso 3: Lectura de los data_preparation
-En los archivos 'data_preparation_users' y 'data_preparation_posts' se encuentra la lectura de los dos dataset exportados y adjuntados en el repo 'dataset_posts.csv' y 'dataset_users.csv'.
+```bash
+git clone https://github.com/TatianaGarcia1128/foro_discusion_udea.git
+```
 
-# Pendientes
-El archivo data_preparation_posts le hace falta hacer la limpieza adecuada; por el momento solo contiene la consulta de la información.
+### Paso 3: Ejecutar los Notebooks  
+Abre Visual Studio Code, selecciona la opción: Archivo/Abrir carpeta y busca la carpeta donde se encuentra el proyecto clonado anteriormente.
+
+Ejecutar cada uno de los pasos de cada notebook en orden secuencial. En caso que se presente errores por librerías que faltan; se deben instalar usando el comando (Ejemplo):
+
+```bash
+pip install bs4
+```
+
+**Importante:** 
+- Para el notebook de preparación de datos del post 'data_preparationÑ_posts.ipynb' es indispensable instalar las siguientes librerías para que sea ejecutada sin errores la línea de limpieza de etiquetas html:
+
+    ```bash
+    pip install bs4
+    pip install html5lib
+    pip install lxml
+    ```
+
+- Igualmente se debe instalar la siguiente librería usada para la tokenización:
+
+    ```bash
+    pip install nltk scikit-learn
+    ```
+
+Posterior a su instalación reiniciar el IDE Visual Studio Code.
+
+
+### Estructura del proyecto
+- `data_preparation_users`: Notebook para el análisis de datos utilizando `dataset_users.csv`.
+- `data_preparation_posts`: Notebook para el análisis de datos utilizando `dataset_posts.csv`.
+
+
+### Notas adicionales
+
+Como parte de las actividades realizadas previamente para obtener los archivos .csv con la data cruda que se usará para este proyecto, se incluyen en el proyecto a modo de complemente e informativo más NO hacen parte o son un requisito para la ejecución de este proyecto.
+
+En la carpeta `diagramas_seleccion_data` se incluye una imagen creada en excalidraw para visualizar las tablas y campos seleccionados para ser trabajados en el proyecto del total de 114 tablas que se tenían.
+
+En la carpeta `procesar_querys` se incluyen uno script en python que fueron usados para exportar los archivos .csv.
+
+
 
 
 
