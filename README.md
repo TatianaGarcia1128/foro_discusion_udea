@@ -57,14 +57,6 @@ En la carpeta `diagramas_seleccion_data` se incluye una imagen creada en excalid
 
 En la carpeta `procesar_querys` se incluyen uno script en python que fueron usados para exportar los archivos .csv.
 
-<<<<<<< HEAD
-=======
-Adicionalmente es necesario la creación de un archivo .env que contenga la información de las variables de conexión a la base de datos Postgres local.
-
-# Paso 3: Lectura de los data_preparation
-En los archivos 'data_preparation_users' y 'data_preparation_posts' se encuentra la lectura de los dos dataset exportados y adjuntados en el repo 'dataset_posts.csv' y 'dataset_users.csv'.
->>>>>>> 88e840a9924a61c0321d307fccf6045ce97d6b91
-
 
 
 
